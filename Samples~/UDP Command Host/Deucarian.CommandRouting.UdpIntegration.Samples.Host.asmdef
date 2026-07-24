@@ -1,0 +1,20 @@
+{
+  "name": "Deucarian.CommandRouting.UdpIntegration.Samples.Host",
+  "rootNamespace": "Deucarian.CommandRouting.UdpIntegration.Samples",
+  "references": [
+    "Deucarian.CommandRouting",
+    "Deucarian.CommandRouting.UdpIntegration",
+    "Newtonsoft.Json"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [
+    "WebGL"
+  ],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,32 @@
+{
+  "packageId": "com.deucarian.command-routing.udp-integration",
+  "displayName": "Deucarian Command Routing UDP Integration",
+  "samplePolicy": "compiled-example",
+  "operationalPackage": true,
+  "ownedCapabilities": [
+    "command-routing-udp-transport"
+  ],
+  "runtimeAssemblies": [
+    "Deucarian.CommandRouting.UdpIntegration"
+  ],
+  "editorAssemblies": [
+    "Deucarian.CommandRouting.UdpIntegration.Editor"
+  ],
+  "sampleAssemblies": [
+    "Deucarian.CommandRouting.UdpIntegration.Samples.Host"
+  ],
+  "testAssemblies": [
+    "Deucarian.CommandRouting.UdpIntegration.Tests"
+  ],
+  "requiredDependencies": [
+    "com.deucarian.command-routing",
+    "com.deucarian.diagnostics",
+    "com.deucarian.editor",
+    "com.deucarian.logging",
+    "com.unity.nuget.newtonsoft-json"
+  ],
+  "optionalVersionDefinedDependencies": [],
+  "allowedDirectDebugCalls": [],
+  "allowedDirectUnityObjectLifetimeCalls": [],
+  "expectedSamplesRoot": "Samples~"
+}

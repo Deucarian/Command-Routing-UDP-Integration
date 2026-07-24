@@ -1,0 +1,37 @@
+{
+  "name": "com.deucarian.command-routing.udp-integration",
+  "version": "0.1.0",
+  "displayName": "Deucarian Command Routing UDP Integration",
+  "description": "UDP transport, Unity main-thread delivery, and Python interoperability for Deucarian Command Routing.",
+  "unity": "2021.3",
+  "license": "MIT",
+  "author": {
+    "name": "Deucarian"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deucarian/Command-Routing-UDP-Integration.git"
+  },
+  "keywords": [
+    "deucarian",
+    "commands",
+    "udp",
+    "python",
+    "network",
+    "integration"
+  ],
+  "dependencies": {
+    "com.deucarian.command-routing": "0.1.0",
+    "com.deucarian.diagnostics": "0.1.4",
+    "com.deucarian.editor": "1.0.5",
+    "com.deucarian.logging": "1.0.2",
+    "com.unity.nuget.newtonsoft-json": "3.2.2"
+  },
+  "samples": [
+    {
+      "displayName": "UDP Command Host",
+      "description": "Ready-to-use UDP command host with a simple application handler.",
+      "path": "Samples~/UDP Command Host"
+    }
+  ]
+}

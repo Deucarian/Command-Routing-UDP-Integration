@@ -1,0 +1,21 @@
+{
+  "name": "Deucarian.CommandRouting.UdpIntegration",
+  "rootNamespace": "Deucarian.CommandRouting.UdpIntegration",
+  "references": [
+    "Deucarian.CommandRouting",
+    "Deucarian.Diagnostics",
+    "Deucarian.Logging",
+    "Newtonsoft.Json"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [
+    "WebGL"
+  ],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

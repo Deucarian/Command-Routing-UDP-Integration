@@ -1,0 +1,14 @@
+name: Package Validation
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    uses: Deucarian/Package-Registry/.github/workflows/unity-package-validation.yml@develop
+    with:
+      package-config: deucarian-package.json

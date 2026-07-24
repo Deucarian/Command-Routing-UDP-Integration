@@ -1,0 +1,21 @@
+{
+  "name": "Deucarian.CommandRouting.UdpIntegration.Editor",
+  "rootNamespace": "Deucarian.CommandRouting.UdpIntegration.Editor",
+  "references": [
+    "Deucarian.CommandRouting",
+    "Deucarian.CommandRouting.UdpIntegration",
+    "Deucarian.Diagnostics",
+    "Deucarian.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

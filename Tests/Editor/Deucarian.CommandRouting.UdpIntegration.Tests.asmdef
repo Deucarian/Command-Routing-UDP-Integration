@@ -1,0 +1,27 @@
+{
+  "name": "Deucarian.CommandRouting.UdpIntegration.Tests",
+  "rootNamespace": "Deucarian.CommandRouting.UdpIntegration.Tests",
+  "references": [
+    "Deucarian.CommandRouting",
+    "Deucarian.CommandRouting.UdpIntegration",
+    "Deucarian.Diagnostics",
+    "Newtonsoft.Json"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll",
+    "Newtonsoft.Json.dll"
+  ],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}
