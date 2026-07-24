@@ -1,6 +1,6 @@
 {
   "name": "com.deucarian.command-routing.udp-integration",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Deucarian Command Routing UDP Integration",
   "description": "UDP transport, Unity main-thread delivery, and Python interoperability for Deucarian Command Routing.",
   "unity": "2021.3",

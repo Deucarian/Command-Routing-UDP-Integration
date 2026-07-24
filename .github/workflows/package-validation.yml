@@ -9,6 +9,7 @@ on:
 
 jobs:
   validate:
-    uses: Deucarian/Package-Registry/.github/workflows/unity-package-validation.yml@develop
+    name: Shared package validation
+    uses: Deucarian/Package-Registry/.github/workflows/deucarian-package-validation.yml@develop
     with:
       package-config: deucarian-package.json
