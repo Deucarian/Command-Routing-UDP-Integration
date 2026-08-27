@@ -90,8 +90,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                 }
 
                 DeucarianEditorChrome.DrawFooterVersion(
-                    "com.deucarian.command-routing.udp-integration",
-                    "0.1.0");
+                    "com.deucarian.command-routing.udp-integration");
                 EditorGUILayout.EndScrollView();
             }
         }
