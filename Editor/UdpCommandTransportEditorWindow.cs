@@ -9,8 +9,6 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
     public sealed class UdpCommandTransportEditorWindow :
         EditorWindow
     {
-        public const string MenuPath =
-            "Tools/Deucarian/Communication/UDP Command Transport";
         public const string CanonicalSettingsPath =
             "Assets/Deucarian/CommandRouting/" +
             "UdpCommandTransportSettings.asset";
@@ -28,7 +26,6 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
         private Vector2 scrollPosition;
         private int selectedTab;
 
-        [MenuItem(MenuPath, priority = 320)]
         public static void Open()
         {
             var window =
@@ -90,8 +87,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                 }
 
                 DeucarianEditorChrome.DrawFooterVersion(
-                    "com.deucarian.command-routing.udp-integration",
-                    "0.1.0");
+                    "com.deucarian.command-routing.udp-integration");
                 EditorGUILayout.EndScrollView();
             }
         }
