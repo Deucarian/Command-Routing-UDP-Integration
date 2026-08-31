@@ -2,6 +2,8 @@
   "name": "Deucarian.CommandRouting.UdpIntegration.Tests",
   "rootNamespace": "Deucarian.CommandRouting.UdpIntegration.Tests",
   "references": [
+    "Deucarian.Editor",
+    "Deucarian.CommandRouting.UdpIntegration.Editor",
     "Deucarian.CommandRouting",
     "Deucarian.CommandRouting.UdpIntegration",
     "Deucarian.Diagnostics",

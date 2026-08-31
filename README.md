@@ -45,7 +45,7 @@ boundary; handlers continue to depend only on Command Routing abstractions.
 
 ## Editor
 
-Open `Tools > Deucarian > Communication > UDP Command Transport` to create or
+Open **Deucarian Control Center > Communication > UDP Command Transport** to create or
 inspect settings, copy a Python example, and review package diagnostics.
 
 The package never logs or stores command payloads. Any application result
