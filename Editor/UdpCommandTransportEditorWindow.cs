@@ -29,8 +29,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
         public static void Open()
         {
             var window =
-                GetWindow<
-                    UdpCommandTransportEditorWindow>(
+                DeucarianEditorWindowPages.GetStandalone<UdpCommandTransportEditorWindow>(
                     "UDP Commands");
             window.minSize = new Vector2(560f, 500f);
             window.Show();
@@ -50,6 +49,9 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                 Repaint();
             }
         }
+
+        public static IDeucarianEditorPage CreatePage() =>
+            DeucarianEditorImGuiPage.Create<UdpCommandTransportEditorWindow>(DeucarianToolIds.CommandRoutingUdp, window => window.OnGUI());
 
         private void OnGUI()
         {
