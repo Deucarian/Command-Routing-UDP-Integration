@@ -57,18 +57,18 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
         {
             using (DeucarianEditorWorkbenchPanelScope page =
                    DeucarianEditorWorkbenchGUI
-                       .BeginSettingsPage(
+                       .BeginSettingsPage(this,
                            GUILayout.ExpandHeight(true)))
             {
                 scrollPosition =
                     EditorGUILayout.BeginScrollView(
                         scrollPosition);
-                DeucarianEditorChrome.DrawPackageHeader(
+                DeucarianEditorChrome.DrawPackageHeader(this,
                     "network",
                     "UDP Command Transport",
                     "Configure UDP and Python command interoperability.");
                 selectedTab =
-                    GUILayout.Toolbar(selectedTab, Tabs);
+                    DeucarianEditorActionGUI.Toolbar(this, selectedTab, Tabs);
                 GUILayout.Space(
                     DeucarianEditorWorkbenchGUI.PanelSpacing);
 
@@ -88,7 +88,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                         break;
                 }
 
-                DeucarianEditorChrome.DrawFooterVersion(
+                DeucarianEditorChrome.DrawFooterVersion(this,
                     "com.deucarian.command-routing.udp-integration");
                 EditorGUILayout.EndScrollView();
             }
@@ -101,7 +101,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
             DeucarianEditorChrome.BeginSection();
             UdpCommandTransportSettings selected =
                 (UdpCommandTransportSettings)
-                EditorGUILayout.ObjectField(
+                DeucarianEditorInputGUI.ObjectField(
                     "Settings Asset",
                     settings,
                     typeof(UdpCommandTransportSettings),
@@ -128,7 +128,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                 DeucarianEditorWorkbenchGUI.PanelSpacing);
             using (new EditorGUILayout.HorizontalScope())
             {
-                if (GUILayout.Button(
+                if (DeucarianEditorActionGUI.Button(
                         "Create Project Settings",
                         DeucarianEditorWorkbenchGUI
                             .PrimaryButtonStyle))
@@ -140,7 +140,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                 using (new EditorGUI.DisabledScope(
                            settings == null))
                 {
-                    if (GUILayout.Button(
+                    if (DeucarianEditorActionGUI.Button(
                             "Ping Active Asset",
                             DeucarianEditorWorkbenchGUI
                                 .SecondaryButtonStyle))
@@ -156,11 +156,11 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
             DeucarianEditorChrome.DrawSectionHeader(
                 "Composition");
             DeucarianEditorChrome.BeginSection();
-            EditorGUILayout.LabelField(
+            DeucarianEditorTextGUI.LabelField(
                 "UdpCommandRoutingHost composes UDP with the " +
                 "transport-independent Command Routing runtime. " +
                 "Application handlers remain independent of sockets.",
-                EditorStyles.wordWrappedLabel);
+                DeucarianEditorWorkbenchGUI.LabelStyle);
             DeucarianEditorChrome.EndSection();
         }
 
@@ -172,7 +172,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
             if (settings == null ||
                 serializedSettings == null)
             {
-                EditorGUILayout.HelpBox(
+                DeucarianEditorTextGUI.HelpBox(
                     "Create or select a UDP settings asset.",
                     MessageType.Info);
                 DeucarianEditorChrome.EndSection();
@@ -191,7 +191,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                     .Validate(settings);
             if (!string.IsNullOrEmpty(validation))
             {
-                EditorGUILayout.HelpBox(
+                DeucarianEditorTextGUI.HelpBox(
                     validation,
                     MessageType.Warning);
             }
@@ -204,14 +204,14 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
             DeucarianEditorChrome.DrawSectionHeader(
                 "Python Client");
             DeucarianEditorChrome.BeginSection();
-            EditorGUILayout.LabelField(
+            DeucarianEditorTextGUI.LabelField(
                 "The package includes a dependency-free Python client " +
                 "under Python~. Use the same host and port configured " +
                 "for the Unity listener.",
-                EditorStyles.wordWrappedLabel);
+                DeucarianEditorWorkbenchGUI.LabelStyle);
             GUILayout.Space(
                 DeucarianEditorWorkbenchGUI.PanelSpacing);
-            if (GUILayout.Button(
+            if (DeucarianEditorActionGUI.Button(
                     "Copy Python Example",
                     DeucarianEditorWorkbenchGUI
                         .PrimaryButtonStyle))
@@ -244,7 +244,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
             DeucarianEditorChrome.BeginSection();
             if (matching.Count == 0)
             {
-                EditorGUILayout.HelpBox(
+                DeucarianEditorTextGUI.HelpBox(
                     "No active UDP command transport is registered. " +
                     "Enter Play Mode or construct a host explicitly.",
                     MessageType.Info);
@@ -254,13 +254,13 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                 foreach (DiagnosticSection section
                          in matching)
                 {
-                    EditorGUILayout.LabelField(
+                    DeucarianEditorTextGUI.LabelField(
                         section.Title,
-                        EditorStyles.boldLabel);
+                        DeucarianEditorWorkbenchGUI.BoldLabelStyle);
                     foreach (DiagnosticItem item
                              in section.Items)
                     {
-                        EditorGUILayout.LabelField(
+                        DeucarianEditorTextGUI.LabelField(
                             item.Label,
                             item.Value);
                     }
