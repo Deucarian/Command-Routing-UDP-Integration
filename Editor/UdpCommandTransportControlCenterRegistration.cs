@@ -25,7 +25,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                     UdpCommandTransportEditorWindow.Open,
                     PackageId,
                     searchTerms: new[] { "udp", "command", "transport", "python" },
-                    order: 120));
+                    order: 120, createPage: UdpCommandTransportEditorWindow.CreatePage));
 
             CardRegistration = DeucarianControlCenterRegistry.RegisterCardProvider(
                 new UdpTransportCardProvider());
@@ -81,7 +81,7 @@ namespace Deucarian.CommandRouting.UdpIntegration.Editor
                             new DeucarianControlCenterAction(
                                 PackageId + ".open",
                                 "Open UDP Transport",
-                                UdpCommandTransportEditorWindow.Open)
+                                UdpCommandTransportEditorWindow.Open, navigationToolId: DeucarianToolIds.CommandRoutingUdp)
                         },
                         searchTerms: new[]
                         {
