@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.6] - 2026-09-11
+
+- Use native transport configuration and status controls with a compact, non-live preview and safe target lifetime handling.
+- Require Editor 1.10.6 for the shared native controls, typography, responsive layouts and accessible interaction states.
+
 ## [0.1.5] - 2026-09-09
 
 ### Changed
